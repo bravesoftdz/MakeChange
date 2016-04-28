@@ -71,8 +71,6 @@
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
-        <VerInfo_Locale>1033</VerInfo_Locale>
-        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <DCC_UsePackage>frxDB19;L208_r140;FireDACASADriver;FireDACSqliteDriver;bindcompfmx;DBXSqliteDriver;AbbreviaVCL;vcldbx;FireDACPgDriver;FireDACODBCDriver;S404_r;fmx;rtl;dbrtl;DbxClientDriver;IndySystem;FireDACCommon;bindcomp;TeeDB;frx19;vclib;inetdbbde;DBXInterBaseDriver;Tee;DataSnapCommon;vclFireDAC;Rave110VCL;xmlrtl;svnui;ibxpress;DbxCommonDriver;vclimg;IndyProtocols;dbxcds;DBXMySQLDriver;FireDACCommonDriver;MetropolisUILiveTile;O408_r;soaprtl;bindengine;vclactnband;vcldb;bindcompdbx;vcldsnap;bindcompvcl;FMXTee;TeeUI;AsyncPro;vclie;XMLPartner_PR;fmxFireDAC;FireDACADSDriver;vcltouch;CustomIPTransport;G114_R140;vclribbon;VclSmp;FireDAC;dsnap;IndyIPServer;Intraweb;fmxase;vcl;IndyCore;VCLRESTComponents;IndyIPCommon;CloudService;CodeSiteExpressPkg;dsnapcon;FireDACIBDriver;FmxTeeUI;inet;fmxobj;E111_R120;FireDACMySQLDriver;vclx;inetdbxpress;svn;fmxdae;frxe19;RESTComponents;bdertl;FireDACMSAccDriver;adortl;dbexpress;IndyIPClient;$(DCC_UsePackage)</DCC_UsePackage>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">

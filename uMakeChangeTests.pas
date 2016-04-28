@@ -16,7 +16,7 @@ type
     [TestCase('Expecting 6400000 w/only pennies','6400000,1,1')]
     [TestCase('Expecting 49'     ,'50,49,1|5|10|25')]
     [TestCase('Expecting 242'    ,'100,242,1|5|10|25')]
-    [TestCase('Expecting 6400000','6400000,34952901974464001,1|5|10|25')]
+    [TestCase('Expecting 34952901974464001','6400000,34952901974464001,1|5|10|25')]
     procedure MakeChangeTest(const aAmount: integer;
       const aExpected : int64; const aCoins : string);
   end;
