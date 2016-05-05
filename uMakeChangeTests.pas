@@ -24,21 +24,20 @@ type
 implementation
 uses System.SysUtils, Spring.Collections, uMakeChange;
 
-function coinsToInt(const aValue: string): IList<integer>;
+function coinsToInt(const aValue: string): TArray<integer>;
 var sCoins: TArray<string>;
-         s: string;
+         s: integer;
 begin
  sCoins := aValue.Split(['|']);
- Result := TCollections.CreateList<integer>;
- for s in sCoins do
-   result.Add(s.ToInteger());
+ SetLength(Result, length(sCoins));
+ for s := 0 to length(sCoins) - 1 do
+   result[s] := sCoins[s].ToInteger;
 end;
 
 procedure TMakeChangeTests.Test_coinsToInt;
 var Input : string;
     Expected : TArray<integer>;
-    Actual : IList<integer>;
-    arrayActual: TArray<integer>;
+    Actual : TArray<integer>;
     i: integer;
 begin
   SetLength(Expected, 4);
@@ -48,8 +47,7 @@ begin
   Expected[3] := 25;
   Input := '1|5|10|25';
   Actual := coinsToInt(Input);
-  arrayActual := Actual.ToArray;
-  assert.AreEqual(Expected, arrayActual);
+  assert.AreEqual(Expected, Actual);
 end;
 
 procedure TMakeChangeTests.MakeChangeTest(const aAmount: integer;
